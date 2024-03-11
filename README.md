@@ -77,7 +77,10 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 4. If you want to build from source on your own, refer to [this](./documents/fcu.md)
 
-## D. System Identification
+## D. Parameters Settings
+@ https://github.com/Yang-Yefeng
+
+## E. System Identification 
 @ https://github.com/RockyJBL
 
 ## Maintainers
