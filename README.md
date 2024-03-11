@@ -4,7 +4,7 @@
 This documentation serves as the tutorial for setting up (from hardware to software) drone \#Aoligei, including -C (for control), -V (for visual), -L (for LiDAR).
 
 ## A. What to buy.
-- Follow this ```.docx``` file to buy all the things your need. 
+- Follow this [file](/documents/buy_hardware.docx) to buy all the things your need. 
 - Use the files [here]() to order 3D models. 
 
 ## B. VIM4
