@@ -3,9 +3,13 @@
 
 This documentation serves as the tutorial for setting up (from hardware to software) drone **Aoligei**, including -C (for control), -V (for visual), -L (for LiDAR).
 
+奥利给兄弟们，造他就完了啊
+
 ## A. What to buy.
 - Follow this [file](/documents/buy_hardware.docx) to buy all the things your need. 
 - Use the files [here]() to order 3D models. 
+
+
 
 ## B. VIM4
 This document provides detailed guidance of configuring VIM4. We assume that you have
@@ -17,7 +21,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 - A HDMI monitor
 - A set of external keyboard and mouse
 
-### Install Ubuntu 22.04 to VIM4.
+### Install Ubuntu 22.04 to VIM4
 1.  Install the heatsink and the fan to VIM4 by following the manual provided in the heatsink package. VIM4 does not work without a heatsink.
 
 2. Insert the SD card into VIM4.
@@ -82,8 +86,12 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 4. If you want to build from source on your own, refer to [this](./documents/fcu.md)
 
-## D. Parameters Settings
-@ https://github.com/Yang-Yefeng
+## D. Pre-configuration of the FCU
+We assume you have at least finished the procedure "C" aforementioned. This part provides some pre-configurations of the FCU. Therefore, we assume you have
+
+- An assembled drone with a FCU, a VIM4, four motors, a battery. (If you still don't know how to install ubuntu22 or docker file into VIM4, never mind. It won't affect this step.)
+- QGC in Ubuntu. (Windows would be fine, but Ubuntu is preferred.)
+- A type-C cable.
 
 ## E. System Identification 
 @ https://github.com/RockyJBL
