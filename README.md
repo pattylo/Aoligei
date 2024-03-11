@@ -29,9 +29,14 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 5. Use the software “balenaEtcher” and the system image downloaded in Step2 to install ubuntu for VIM4.
 
 ### Post Installation
-1. Install docker in VIM4. Follow this [page](https://docs.docker.com/engine/install/ubuntu/) and it should get the task done. Remember to read everything when you are doing the installation, please do not just blindly copy every single command into your terminal.
+1. First setup a new username with [NATO-alphabets](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet) (for easy management lah...). Make it administrator to have ```sudo``` power. 
+2. Then, reboot, login with new user, and delete the ```khadas``` user. Run the following to change the username:
+    ```
+    sudo passwd {username}
+    ```
+3. Install docker in VIM4. Follow this [page](https://docs.docker.com/engine/install/ubuntu/) and it should get the task done. Remember to read everything when you are doing the installation, please do not just blindly copy every single command into your terminal.
 
-2. Do the following to get your Docker image:
+4. Do the following to get your Docker image:
     ```
     git clone https://github.com/HKPolyU-UAV/airo_docker_lib
     ./build_hehe.sh vimswift
@@ -41,7 +46,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
    ./run_hehe.sh vimswift
    ```
 
-3. Voila! You have an usable programming environment now! When modifying your code, we suggest you to use VScode on your own laptop and connect the drone with ```ssh```. You can refer to this [documentation](https://github.com/pattylo/useful_tools/blob/main/vscode_github/vscode_github.md) for more info.
+5. Voila! You have an usable programming environment now! When modifying your code, we suggest you to use VScode on your own laptop and connect the drone with ```ssh```. You can refer to this [documentation](https://github.com/pattylo/useful_tools/blob/main/vscode_github/vscode_github.md) for more info.
 
 ## C. Firmware Setup
 - A computer w/ Ubuntu >=20.04
