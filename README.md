@@ -79,6 +79,13 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 ## D. System Identification
 
+
+## Maintainers
+[Yefeng](https://github.com/Yang-Yefeng) @ AIRO-LAB @ RCUAS, HKPolyU <br>
+[RockyJBL](https://github.com/RockyJBL) @ AIRO-LAB @ RCUAS, HKPolyU <br>
+VITO @ AIRO-LAB @ RCUAS, HKPolyU <br>
+[pattylo](https://github.com/pattylo) @ AIRO-LAB @ RCUAS, HKPolyU
+
 <!-- # PX4 Drone Autopilot
 
 [![Releases](https://img.shields.io/github/release/PX4/PX4-Autopilot.svg)](https://github.com/PX4/PX4-Autopilot/releases) [![DOI](https://zenodo.org/badge/22634/PX4/PX4-Autopilot.svg)](https://zenodo.org/badge/latestdoi/22634/PX4/PX4-Autopilot)
