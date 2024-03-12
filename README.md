@@ -132,6 +132,7 @@ The "Autopilot Orientation" is "ROTATION_NONE" (default.)
 We use "Mode2" here, as shown bellow. (If you have your own style, follow you own style.)
 
 <div align=center>
+<img src="/documents/figures/mode2.png"/>
 ![image](/documents/figures/mode2.png)
 </div>
 
