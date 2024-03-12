@@ -164,7 +164,7 @@ Then, calibrate the ESC. Click the button in the following figure. Just follow t
 Firstly, you should see a screen like this.
 
 <div align=center>
-<img src="/documents/figures/actuators_cali.png">
+<img src="/documents/figures/actuators_cali.png" width="120">
 </div>
 
 
