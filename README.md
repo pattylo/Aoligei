@@ -38,9 +38,9 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
     sudo passwd {username}
     ```
-3. Install docker in VIM4. Follow this [page](https://docs.docker.com/engine/install/ubuntu/) and it should get the task done. Remember to read everything when you are doing the installation, please do not just blindly copy every single command into your terminal.
-
-4. Do the following to get your Docker image:
+3. For convenience, you'd better install Firefox to your VIM4 because Google Chrome is not supported.
+4. Install docker in VIM4. Follow this [page](https://docs.docker.com/engine/install/ubuntu/) and it should get the task done. Remember to read everything when you are doing the installation, please do not just blindly copy every single command into your terminal.
+5. Do the following to get your Docker image:
     ```
     git clone https://github.com/HKPolyU-UAV/airo_docker_lib
     ./build_hehe.sh vimswift
@@ -49,8 +49,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
    ```
    ./run_hehe.sh vimswift
    ```
-
-5. Voila! You have an usable programming environment now! When modifying your code, we suggest you to use VScode on your own laptop and connect the drone with ```ssh```. You can refer to this [documentation](https://github.com/pattylo/useful_tools/blob/main/vscode_github/vscode_github.md) for more info.
+6. Voila! You have an usable programming environment now! When modifying your code, we suggest you to use VScode on your own laptop and connect the drone with ```ssh```. You can refer to this [documentation](https://github.com/pattylo/useful_tools/blob/main/vscode_github/vscode_github.md) for more info.
 
 ## 3. Firmware Setup
 - A computer w/ Ubuntu >=20.04
