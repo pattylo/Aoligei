@@ -207,7 +207,7 @@ We might don't know how to fix your bugs, but we are curious about them. Thank y
 ## 5. System Identification 
 @ https://github.com/RockyJBL
 
-嗨嗨嗨，老铁们啊，我又来了啊。虽然不是同一时间，但是是同一教程。今天，由我，RockyJBL，教老铁们辨识这款无人机的参数。
+嗨嗨嗨，老铁们啊，我又来了啊。虽然不是同一时间，但是是同一教程。今天，由我教老铁们辨识这款无人机的参数。
 
 ## Maintainers
 [Yefeng](https://github.com/Yang-Yefeng) @ AIRO-LAB @ RCUAS, HKPolyU <br>
