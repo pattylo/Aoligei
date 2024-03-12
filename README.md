@@ -167,8 +167,31 @@ Firstly, you should see a screen like this.
 <img src="/documents/figures/actuators_cali.png" width="480">
 </div>
 
+See the right column, set the MAIN1-2 and MAIN3-4 to "DShot1200", and then press "Identify & Assign Motors".
 
+Secondly, see the left column, the positions (X and Y) from Motor 1 to 4 are shown below.
 
+| Motor  | Position X | Position Y | Direction CCW |
+|--------|------------|------------|---------------|
+| Motor1 | 0.08       | 0.08       | Yes           |
+| Motor2 | -0.08      | -0.08      | Yes           |
+| Motor3 | 0.08       | -0.08      | No            |
+| Motor4 | -0.08      | 0.08       | No            |
+
+Noting that the "0.08" here is especially designed for our own drone.
+You'd better use a ruler to measure the semi-major axis of your own drone.
+Then, the expected rotation direction of the four motors are shown in the QGC.
+
+<div align=center>
+<img src="/documents/figures/uav.png" width="350">
+</div>
+
+Finally, you need to reverse the rotation direction if some motors don't rotate as expected.
+Use the buttons "Set Spin Direction 1" and "Set Spin Direction 2" to correct them, which are shown below.
+
+<div align=center>
+<img src="/documents/figures/motor_cali.png" width="350">
+</div>
 
 ## 5. System Identification 
 @ https://github.com/RockyJBL
