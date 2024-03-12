@@ -26,9 +26,9 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 2. Insert the SD card into VIM4.
 
-3. Download the software from https://docs.khadas.com/products/sbc/vim4/install-os/install-os-into-external-storage, and download “Etcher”.
+3. Download the software from https://docs.khadas.com/products/sbc/vim4/install-os/install-os-into-external-storage, and download “ETCHER FOR WINDOWS (X86|X64) (INSTALLER)”.
 
-4. Download the system image from https://etcher.balena.io/#download-etcher. Choose “ETCHER FOR WINDOWS (X86|X64) (INSTALLER)”.
+4. Download the system image from https://dl.khadas.com/products/vim4/firmware/ubuntu/generic/. Choose “vim4-ubuntu-22.04-gnome-linux-5.4-fenix-1.5-230425.img.xz”.
 
 5. Use the software “balenaEtcher” and the system image downloaded in Step2 to install ubuntu for VIM4.
 
