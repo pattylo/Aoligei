@@ -125,7 +125,7 @@ Then, we start to calibrate the quadrotor. Noting that different people have dif
 Therefore, you don't need to follow EVERYTHING. We assume you can connect the FCU with QGC.
 
 #### 4.2.1 Sensors
-In QGC, switch to "Sensors". Calibrate Gyroscope, Accelerator, Level Horizon, and Orientations, respectively.
+Calibrate Gyroscope, Accelerator, Level Horizon, and Orientations, respectively.
 The "Autopilot Orientation" is "ROTATION_NONE" (default.)
 
 #### 4.2.2. Radio
@@ -149,6 +149,7 @@ The following is the mode setting of our group. You can have your own style.
 
 Connect the drone with the battery. Push the first "Calculate" in the following figure.
 Enter the measured voltage of the battery into the blank.
+Then, and write the series of your battery (3, 4, or 6) into "Number of Cells"
 
 <div align=center>
 <img src="/documents/figures/batterycali.png">
@@ -158,6 +159,16 @@ Then, calibrate the ESC. Click the button in the following figure. Just follow t
 <div align=center>
 <img src="/documents/figures/ESCcali.png">
 </div>
+
+#### 4.2.5. Calibrate Actuators
+Firstly, you should see a screen like this.
+
+<div align=center>
+<img src="/documents/figures/actuators_cali.png">
+</div>
+
+
+
 
 ## 5. System Identification 
 @ https://github.com/RockyJBL
