@@ -80,7 +80,9 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
 3. Load firmware to the FCU. Open QGC, and go to "Firmware" to upload ```.px4``` to FCU.
 
-    ![image](/documents/figures/qgc.png)
+   <div align=center>
+   <img src="/documents/figures/qgc.png"/>
+   </div>
 
     Click "OK", it should pop out a file selection panel. Go the "build" file of this repo, and select [this (v1.3)](/build/holybro_kakuteh7_default.px4) or [that (v2)](/build/holybro_kakuteh7v2_default.px4).
 
@@ -99,22 +101,22 @@ We assume you have at least finished the procedure "C" aforementioned. This part
 You may need half a minute to connect the FCU with QGC. When the connection is stable, you can see a content on the left of GQC.
 Select "Parameters", and the following parameters need to be reset:
 
-| Parameter         | Value    | Comment                               |
-|-------------------|----------|---------------------------------------|
-| SYS_HAS_MAG       | 0        | This FCU does not have a magnetometer |
-| SYS_HAS_GPS       | Disabled | This drone does not have a GPS        |
-| SYS_HAS_BARO      | Disabled | This FCU does not have a barometer    |
-| SYS_MC_EST_GROUP  | ekf2     |                                       |
+| Parameter           | Value     |               Comment                 |
+|:-------------------:|:---------:|:-------------------------------------:|
+|     SYS_HAS_MAG     |     0     | This FCU does not have a magnetometer |
+|     SYS_HAS_GPS     | Disabled  |    This drone does not have a GPS     |
+|    SYS_HAS_BARO     | Disabled  |  This FCU does not have a barometer   |
+|  SYS_MC_EST_GROUP   |   ekf2    |                                       |
 
 Reboot the FCU with QGC, when the FCU is reloaded, set
 
-| Parameter     | Value    | Comment |
-|---------------|----------|---------|
-| EKF2_EV_CTRL  | 15       |         |
-| EKF2_HGT_REF  | Vision   |         |
-| MAV_0_CONFIG  | Disabled |         |
-| MAV_1_CONFIG  | TELEM1   |         |
-| SER_TEL1_BAUD | 115200   |         |
+| Parameter      | Value    | Comment   |
+|:--------------:|:--------:|:---------:|
+|  EKF2_EV_CTRL  |    15    |           |
+|  EKF2_HGT_REF  |  Vision  |           |
+|  MAV_0_CONFIG  | Disabled |           |
+|  MAV_1_CONFIG  |  TELEM1  |           |
+| SER_TEL1_BAUD  |  115200  |           |
 
 Reboot the FCU with QGC, and this step is completed.
 
@@ -171,12 +173,12 @@ See the right column, set the MAIN1-2 and MAIN3-4 to "DShot1200", and then press
 
 Secondly, see the left column, the positions (X and Y) from Motor 1 to 4 are shown below.
 
-| Motor  | Position X | Position Y | Direction CCW |
-|--------|------------|------------|---------------|
-| Motor1 | 0.08       | 0.08       | Yes           |
-| Motor2 | -0.08      | -0.08      | Yes           |
-| Motor3 | 0.08       | -0.08      | No            |
-| Motor4 | -0.08      | 0.08       | No            |
+|  Motor   |  Position X  |  Position Y  |  Direction CCW  |
+|:--------:|:------------:|:------------:|:---------------:|
+|  Motor1  |     0.08     |     0.08     |       Yes       |
+|  Motor2  |    -0.08     |    -0.08     |       Yes       |
+|  Motor3  |     0.08     |    -0.08     |       No        |
+|  Motor4  |    -0.08     |     0.08     |       No        |
 
 Noting that the "0.08" here is especially designed for our own drone.
 You'd better use a ruler to measure the semi-major axis of your own drone.
@@ -192,6 +194,8 @@ Use the buttons "Set Spin Direction 1" and "Set Spin Direction 2" to correct the
 <div align=center>
 <img src="/documents/figures/motor_cali.png" width="350">
 </div>
+
+congratulations! If everything goes well, you have finished pre-configurations of the drone.
 
 ## 5. System Identification 
 @ https://github.com/RockyJBL
