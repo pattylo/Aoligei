@@ -133,7 +133,6 @@ We use "Mode2" here, as shown bellow. (If you have your own style, follow you ow
 
 <div align=center>
 <img src="/documents/figures/mode2.png"/>
-![image](/documents/figures/mode2.png)
 </div>
 
 Then, calibrate the radio as others do. Nothing special; therefore, detailed description is omitted here.
@@ -142,7 +141,7 @@ Then, calibrate the radio as others do. Nothing special; therefore, detailed des
 The following is the mode setting of our group. You can have your own style.
 
 <div align=center>
-![image](/documents/figures/modesetting.png)
+<img src="/documents/figures/modesetting.png">
 </div>
 
 #### 4.2.4. Power setup and ESC calibration
@@ -152,12 +151,12 @@ Connect the drone with the battery. Push the first "Calculate" in the following 
 Enter the measured voltage of the battery into the blank.
 
 <div align=center>
-![image](/documents/figures/batterycali.png)
+<img src="/documents/figures/batterycali.png">
 </div>
 
 Then, calibrate the ESC. Click the button in the following figure. Just follow the instructions.
 <div align=center>
-![image](/documents/figures/ESCcali.png)
+<img src="/documents/figures/ESCcali.png">
 </div>
 
 ## 5. System Identification 
