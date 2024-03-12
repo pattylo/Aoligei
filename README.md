@@ -80,7 +80,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
 3. Load firmware to the FCU. Open QGC, and go to "Firmware" to upload ```.px4``` to FCU.
 
-    ![image](/documents/qgc.png)
+    ![image](/documents/figures/qgc.png)
 
     Click "OK", it should pop out a file selection panel. Go the "build" file of this repo, and select [this (v1.3)](/build/holybro_kakuteh7_default.px4) or [that (v2)](/build/holybro_kakuteh7v2_default.px4).
 
@@ -131,23 +131,23 @@ The "Autopilot Orientation" is "ROTATION_NONE" (default.)
 #### 4.2.2. Radio
 We use "Mode2" here, as shown bellow. (If you have your own style, follow you own style.)
 
-![image](/documents/mode2.png)
+![image](/documents/figures/mode2.png)
 
 Then, calibrate the radio as others do. Nothing special; therefore, detailed description is omitted here.
 
 #### 4.2.3. Flight mode setting
 The following is the mode setting of our group. You can have your own style.
-![image](/documents/modesetting.png)
+![image](/documents/figures/modesetting.png)
 
 #### 4.2.4. Power setup and ESC calibration
 **DO NOT INSTALL PROPELLERS!!**
 
 Connect the drone with the battery. Push the first "Calculate" in the following figure.
 Enter the measured voltage of the battery into the blank.  
-![image](/documents/batterycali.png)
+![image](/documents/figures/batterycali.png)
 
 Then, calibrate the ESC. Click the button in the following figure. Just follow the instructions.
-![image](/documents/ESCCali.png)
+![image](/documents/figures/ESCcali.png)
 
 ## 5. System Identification 
 @ https://github.com/RockyJBL
