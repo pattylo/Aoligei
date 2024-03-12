@@ -5,13 +5,13 @@ This documentation serves as the tutorial for setting up (from hardware to softw
 
 奥利给兄弟们，造他就完了啊
 
-## A. What to buy.
+## 1. What to buy.
 - Follow this [file](/documents/buy_hardware.docx) to buy all the things your need. 
 - Use the files [here]() to order 3D models. 
 
 
 
-## B. VIM4
+## 2. VIM4 - the on board computer
 This document provides detailed guidance of configuring VIM4. We assume that you have
 - A VIM4
 - A heat sink for VIM4
@@ -21,7 +21,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 - A HDMI monitor
 - A set of external keyboard and mouse
 
-### Install Ubuntu 22.04 to VIM4
+### 2.1. Install Ubuntu 22.04 to VIM4
 1.  Install the heatsink and the fan to VIM4 by following the manual provided in the heatsink package. VIM4 does not work without a heatsink.
 
 2. Insert the SD card into VIM4.
@@ -32,7 +32,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 5. Use the software “balenaEtcher” and the system image downloaded in Step2 to install ubuntu for VIM4.
 
-### Post Installation
+### 2.2. Post Installation
 1. First setup a new username with [NATO-alphabets](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet) (for easy management lah...). Make it administrator to have ```sudo``` power. 
 2. Then, reboot, login with new user, and delete the ```khadas``` user. Run the following to change the username:
     ```
@@ -52,13 +52,13 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 5. Voila! You have an usable programming environment now! When modifying your code, we suggest you to use VScode on your own laptop and connect the drone with ```ssh```. You can refer to this [documentation](https://github.com/pattylo/useful_tools/blob/main/vscode_github/vscode_github.md) for more info.
 
-## C. Firmware Setup
+## 3. Firmware Setup
 - A computer w/ Ubuntu >=20.04
 - A Kakute FCU (v1.3 || v2)
 - A Type-C USB wire
 - A 4G SD card (if you are using Kakute v1.3)
 
-### Firmware Upgrade
+### 3.1. Firmware Upgrade
 1. Install DFU library on your own computer
     ```
     sudo apt install dfu-util -y
@@ -86,7 +86,8 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 4. If you want to build from source on your own, refer to [this](./documents/fcu.md)
 
-## D. Pre-configuration of the FCU
+## 4. Pre-configuration of the FCU
+### 4.1. Parameter settings
 We assume you have at least finished the procedure "C" aforementioned. This part provides some pre-configurations of the FCU. Therefore, we assume you have
 
 - An assembled drone with a FCU, a VIM4, four motors, a battery. (If you still don't know how to install ubuntu22 or docker file into VIM4, never mind. It won't affect this step.)
@@ -118,8 +119,36 @@ Reboot the FCU with QGC, when the FCU is reloaded, set
 Reboot the FCU with QGC, and this step is completed.
 
 
-## E. System Identification 
+
+### 4.2. Quadrotor calibration
+Then, we start to calibrate the quadrotor. Noting that different people have different styles.
+Therefore, you don't need to follow EVERYTHING. We assume you can connect the FCU with QGC.
+
+#### 4.2.1 Sensors
+In QGC, switch to "Sensors". Calibrate Gyroscope, Accelerator, Level Horizon, and Orientations, respectively.
+The "Autopilot Orientation" is "ROTATION_NONE" (default.)
+
+#### 4.2.2. Radio
+We use "Mode2" here, as shown bellow. (If you have your own style, follow you own style.)
+
+![image](/documents/mode2.png)
+
+Then, calibrate the radio as others do. Nothing special; therefore, detailed description is omitted here.
+
+#### 4.2.3. Flight mode setting
+The following is the mode setting of our group. You can have your own style.
+![image](/documents/modesetting.png)
+
+#### 4.2.4. Power setup and ESC calibration
+**DO NOT INSTALL PROPELLERS!!**
+
+Push the "Calculate"
+
+
+## 5. System Identification 
 @ https://github.com/RockyJBL
+
+嗨嗨嗨，老铁们啊，我又来了啊。虽然不是同一时间，但是是同一教程。今天，由我，RockyJBL，教老铁们辨识这款无人机的参数。
 
 ## Maintainers
 [Yefeng](https://github.com/Yang-Yefeng) @ AIRO-LAB @ RCUAS, HKPolyU <br>
