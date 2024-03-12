@@ -93,6 +93,31 @@ We assume you have at least finished the procedure "C" aforementioned. This part
 - QGC in Ubuntu. (Windows would be fine, but Ubuntu is preferred.)
 - A type-C cable.
 
+**NOTING: This drone is currently only used in a motion-capture-located in-door room. Out door flight is currently not supported.**
+
+You may need half a minute to connect the FCU with QGC. When the connection is stable, you can see a content on the left of GQC.
+Select "Parameters", and the following parameters need to be reset:
+
+| Parameter         | Value    | Comment                               |
+|-------------------|----------|---------------------------------------|
+| SYS_HAS_MAG       | 0        | This FCU does not have a magnetometer |
+| SYS_HAS_GPS       | Disabled | This drone does not have a GPS        |
+| SYS_HAS_BARO      | Disabled | This FCU does not have a barometer    |
+| SYS_MC_EST_GROUP  | ekf2     |                                       |
+
+Reboot the FCU with QGC, when the FCU is reloaded, set
+
+| Parameter     | Value    | Comment |
+|---------------|----------|---------|
+| EKF2_EV_CTRL  | 15       |         |
+| EKF2_HGT_REF  | Vision   |         |
+| MAV_0_CONFIG  | Disabled |         |
+| MAV_1_CONFIG  | TELEM1   |         |
+| SER_TEL1_BAUD | 115200   |         |
+
+Reboot the FCU with QGC, and this step is completed.
+
+
 ## E. System Identification 
 @ https://github.com/RockyJBL
 
