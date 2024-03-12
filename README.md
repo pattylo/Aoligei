@@ -195,7 +195,14 @@ Use the buttons "Set Spin Direction 1" and "Set Spin Direction 2" to correct the
 <img src="/documents/figures/motor_cali.png" width="350">
 </div>
 
-congratulations! If everything goes well, you have finished pre-configurations of the drone.
+Congratulations! If everything goes well, you have finished pre-configurations of the drone.
+
+`Tips: Although we provide detailed calibration instruction here,
+many users (including ourselves) would meet many confused bugs while doing the step.
+That is because different people have totally different styles, use different hardware, have different QGC version, have different radios, et al. 
+PLease feel free to ask the "Maintainers" shown below and share us your weired bugs.
+We might don't know how to fix your bugs, but we are curious about them. Thank you very much!`
+
 
 ## 5. System Identification 
 @ https://github.com/RockyJBL
