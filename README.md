@@ -143,8 +143,10 @@ The following is the mode setting of our group. You can have your own style.
 **DO NOT INSTALL PROPELLERS!!**
 
 Connect the drone with the battery. Push the first "Calculate" in the following figure.
-Enter the measured voltage of the battery into the blank.  
+Enter the measured voltage of the battery into the blank.
+<div align=center>
 ![image](/documents/figures/batterycali.png)
+<\div>
 
 Then, calibrate the ESC. Click the button in the following figure. Just follow the instructions.
 ![image](/documents/figures/ESCcali.png)
