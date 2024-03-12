@@ -81,7 +81,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 3. Load firmware to the FCU. Open QGC, and go to "Firmware" to upload ```.px4``` to FCU.
 
    <div align=center>
-   <img src="/documents/figures/qgc.png"/>
+   <img src="/documents/figures/qgc2.png"/>
    </div>
 
     Click "OK", it should pop out a file selection panel. Go the "build" file of this repo, and select [this (v1.3)](/build/holybro_kakuteh7_default.px4) or [that (v2)](/build/holybro_kakuteh7v2_default.px4).
