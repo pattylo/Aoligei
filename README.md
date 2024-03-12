@@ -131,25 +131,33 @@ The "Autopilot Orientation" is "ROTATION_NONE" (default.)
 #### 4.2.2. Radio
 We use "Mode2" here, as shown bellow. (If you have your own style, follow you own style.)
 
+<div align=center>
 ![image](/documents/figures/mode2.png)
+</div>
 
 Then, calibrate the radio as others do. Nothing special; therefore, detailed description is omitted here.
 
 #### 4.2.3. Flight mode setting
 The following is the mode setting of our group. You can have your own style.
+
+<div align=center>
 ![image](/documents/figures/modesetting.png)
+</div>
 
 #### 4.2.4. Power setup and ESC calibration
 **DO NOT INSTALL PROPELLERS!!**
 
 Connect the drone with the battery. Push the first "Calculate" in the following figure.
 Enter the measured voltage of the battery into the blank.
+
 <div align=center>
 ![image](/documents/figures/batterycali.png)
-<\div>
+</div>
 
 Then, calibrate the ESC. Click the button in the following figure. Just follow the instructions.
+<div align=center>
 ![image](/documents/figures/ESCcali.png)
+</div>
 
 ## 5. System Identification 
 @ https://github.com/RockyJBL
