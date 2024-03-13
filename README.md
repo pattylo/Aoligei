@@ -24,7 +24,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 ### Install Ubuntu 22.04 to VIM4
 1.  Install the heatsink and the fan to VIM4 by following the manual provided in the heatsink package. VIM4 does not work without a heatsink.
 
-2. Insert the SD card into VIM4.
+2. Insert the SD card into a SD card reader.
 
 3. Download the software from https://docs.khadas.com/products/sbc/vim4/install-os/install-os-into-external-storage, and download “ETCHER FOR WINDOWS (X86|X64) (INSTALLER)”.
 
