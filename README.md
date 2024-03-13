@@ -5,13 +5,13 @@ This documentation serves as the tutorial for setting up (from hardware to softw
 
 奥利给兄弟们，造他就完了啊
 
-## A. What to buy.
+## 1. What to buy.
 - Follow this [file](/documents/buy_hardware.docx) to buy all the things your need. 
 - Use the files [here]() to order 3D models. 
 
 
 
-## B. VIM4
+## 2. VIM4 - the on board computer
 This document provides detailed guidance of configuring VIM4. We assume that you have
 - A VIM4
 - A heat sink for VIM4
@@ -21,7 +21,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 - A HDMI monitor
 - A set of external keyboard and mouse
 
-### Install Ubuntu 22.04 to VIM4
+### 2.1. Install Ubuntu 22.04 to VIM4
 1.  Install the heatsink and the fan to VIM4 by following the manual provided in the heatsink package. VIM4 does not work without a heatsink.
 
 2. Insert the SD card into a SD card reader.
@@ -32,15 +32,15 @@ This document provides detailed guidance of configuring VIM4. We assume that you
 
 5. Use the software “balenaEtcher” and the system image downloaded in Step2 to install ubuntu for VIM4.
 
-### Post Installation
+### 2.2. Post Installation
 1. First setup a new username with [NATO-alphabets](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet) (for easy management lah...). Make it administrator to have ```sudo``` power. 
 2. Then, reboot, login with new user, and delete the ```khadas``` user. Run the following to change the username:
     ```
     sudo passwd {username}
     ```
-3. Install docker in VIM4. Follow this [page](https://docs.docker.com/engine/install/ubuntu/) and it should get the task done. Remember to read everything when you are doing the installation, please do not just blindly copy every single command into your terminal.
-
-4. Do the following to get your Docker image:
+3. For convenience, you'd better install Firefox to your VIM4 because Google Chrome is not supported.
+4. Install docker in VIM4. Follow this [page](https://docs.docker.com/engine/install/ubuntu/) and it should get the task done. Remember to read everything when you are doing the installation, please do not just blindly copy every single command into your terminal.
+5. Do the following to get your Docker image:
     ```
     git clone https://github.com/HKPolyU-UAV/airo_docker_lib
     ./build_hehe.sh vimswift
@@ -49,16 +49,15 @@ This document provides detailed guidance of configuring VIM4. We assume that you
    ```
    ./run_hehe.sh vimswift
    ```
+6. Voila! You have an usable programming environment now! When modifying your code, we suggest you to use VScode on your own laptop and connect the drone with ```ssh```. You can refer to this [documentation](https://github.com/pattylo/useful_tools/blob/main/vscode_github/vscode_github.md) for more info.
 
-5. Voila! You have an usable programming environment now! When modifying your code, we suggest you to use VScode on your own laptop and connect the drone with ```ssh```. You can refer to this [documentation](https://github.com/pattylo/useful_tools/blob/main/vscode_github/vscode_github.md) for more info.
-
-## C. Firmware Setup
+## 3. Firmware Setup
 - A computer w/ Ubuntu >=20.04
 - A Kakute FCU (v1.3 || v2)
 - A Type-C USB wire
 - A 4G SD card (if you are using Kakute v1.3)
 
-### Firmware Upgrade
+### 3.1. Firmware Upgrade
 1. Install DFU library on your own computer
     ```
     sudo apt install dfu-util -y
@@ -80,21 +79,134 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
 3. Load firmware to the FCU. Open QGC, and go to "Firmware" to upload ```.px4``` to FCU.
 
-    ![image](/documents/qgc.png)
+   <div align=center>
+   <img src="/documents/figures/qgc2.png"/>
+   </div>
 
     Click "OK", it should pop out a file selection panel. Go the "build" file of this repo, and select [this (v1.3)](/build/holybro_kakuteh7_default.px4) or [that (v2)](/build/holybro_kakuteh7v2_default.px4).
 
 4. If you want to build from source on your own, refer to [this](./documents/fcu.md)
 
-## D. Pre-configuration of the FCU
+## 4. Pre-configuration of the FCU
+### 4.1. Parameter settings
 We assume you have at least finished the procedure "C" aforementioned. This part provides some pre-configurations of the FCU. Therefore, we assume you have
 
 - An assembled drone with a FCU, a VIM4, four motors, a battery. (If you still don't know how to install ubuntu22 or docker file into VIM4, never mind. It won't affect this step.)
 - QGC in Ubuntu. (Windows would be fine, but Ubuntu is preferred.)
 - A type-C cable.
 
-## E. System Identification 
+**NOTING: This drone is currently only used in a motion-capture-located in-door room. Out door flight is currently not supported.**
+
+You may need half a minute to connect the FCU with QGC. When the connection is stable, you can see a content on the left of GQC.
+Select "Parameters", and the following parameters need to be reset:
+
+| Parameter           | Value     |               Comment                 |
+|:-------------------:|:---------:|:-------------------------------------:|
+|     SYS_HAS_MAG     |     0     | This FCU does not have a magnetometer |
+|     SYS_HAS_GPS     | Disabled  |    This drone does not have a GPS     |
+|    SYS_HAS_BARO     | Disabled  |  This FCU does not have a barometer   |
+|  SYS_MC_EST_GROUP   |   ekf2    |                                       |
+
+Reboot the FCU with QGC, when the FCU is reloaded, set
+
+| Parameter      | Value    | Comment   |
+|:--------------:|:--------:|:---------:|
+|  EKF2_EV_CTRL  |    15    |           |
+|  EKF2_HGT_REF  |  Vision  |           |
+|  MAV_0_CONFIG  | Disabled |           |
+|  MAV_1_CONFIG  |  TELEM1  |           |
+| SER_TEL1_BAUD  |  115200  |           |
+
+Reboot the FCU with QGC, and this step is completed.
+
+
+
+### 4.2. Quadrotor calibration
+Then, we start to calibrate the quadrotor. Noting that different people have different styles.
+Therefore, you don't need to follow EVERYTHING. We assume you can connect the FCU with QGC.
+
+#### 4.2.1 Sensors
+Calibrate Gyroscope, Accelerator, Level Horizon, and Orientations, respectively.
+The "Autopilot Orientation" is "ROTATION_NONE" (default.)
+
+#### 4.2.2. Radio
+We use "Mode2" here, as shown bellow. (If you have your own style, follow you own style.)
+
+<div align=center>
+<img src="/documents/figures/mode2.png"/>
+</div>
+
+Then, calibrate the radio as others do. Nothing special; therefore, detailed description is omitted here.
+
+#### 4.2.3. Flight mode setting
+The following is the mode setting of our group. You can have your own style.
+
+<div align=center>
+<img src="/documents/figures/modesetting.png">
+</div>
+
+#### 4.2.4. Power setup and ESC calibration
+**DO NOT INSTALL PROPELLERS!!**
+
+Connect the drone with the battery. Push the first "Calculate" in the following figure.
+Enter the measured voltage of the battery into the blank.
+Then, and write the series of your battery (3, 4, or 6) into "Number of Cells"
+
+<div align=center>
+<img src="/documents/figures/batterycali.png">
+</div>
+
+Then, calibrate the ESC. Click the button in the following figure. Just follow the instructions.
+<div align=center>
+<img src="/documents/figures/ESCcali.png">
+</div>
+
+#### 4.2.5. Calibrate Actuators
+Firstly, you should see a screen like this.
+
+<div align=center>
+<img src="/documents/figures/actuators_cali.png" width="480">
+</div>
+
+See the right column, set the MAIN1-2 and MAIN3-4 to "DShot1200", and then press "Identify & Assign Motors".
+
+Secondly, see the left column, the positions (X and Y) from Motor 1 to 4 are shown below.
+
+|  Motor   |  Position X  |  Position Y  |  Direction CCW  |
+|:--------:|:------------:|:------------:|:---------------:|
+|  Motor1  |     0.08     |     0.08     |       Yes       |
+|  Motor2  |    -0.08     |    -0.08     |       Yes       |
+|  Motor3  |     0.08     |    -0.08     |       No        |
+|  Motor4  |    -0.08     |     0.08     |       No        |
+
+Noting that the "0.08" here is especially designed for our own drone.
+You'd better use a ruler to measure the semi-major axis of your own drone.
+Then, the expected rotation direction of the four motors are shown in the QGC.
+
+<div align=center>
+<img src="/documents/figures/uav.png" width="350">
+</div>
+
+Finally, you need to reverse the rotation direction if some motors don't rotate as expected.
+Use the buttons "Set Spin Direction 1" and "Set Spin Direction 2" to correct them, which are shown below.
+
+<div align=center>
+<img src="/documents/figures/motor_cali.png" width="350">
+</div>
+
+Congratulations! If everything goes well, you have finished pre-configurations of the drone.
+
+`Tips: Although we provide detailed calibration instruction here,
+many users (including ourselves) would meet many confused bugs while doing the step.
+That is because different people have totally different styles, use different hardware, have different QGC version, have different radios, et al. 
+PLease feel free to ask the "Maintainers" shown below and share us your weired bugs.
+We might don't know how to fix your bugs, but we are curious about them. Thank you very much!`
+
+
+## 5. System Identification 
 @ https://github.com/RockyJBL
+
+嗨嗨嗨，老铁们啊，我又来了啊。虽然不是同一时间，但是是同一教程。今天，由我教老铁们辨识这款无人机的参数。
 
 ## Maintainers
 [Yefeng](https://github.com/Yang-Yefeng) @ AIRO-LAB @ RCUAS, HKPolyU <br>
