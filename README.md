@@ -39,6 +39,10 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     sudo passwd {username}
     ```
 3. For convenience, you'd better install Firefox to your VIM4 because Google Chrome is not supported.
+
+`However, YOU MUST NOT USE "snap" to install Firefox since there might be a bug in arm-ubuntu22.04. 
+ Therefore, either install Firefox with traditional "apt-get" or do not use Firefox !!`
+
 4. Install docker in VIM4. Follow this [page](https://docs.docker.com/engine/install/ubuntu/) and it should get the task done. Remember to read everything when you are doing the installation, please do not just blindly copy every single command into your terminal.
 5. Do the following to get your Docker image:
     ```
