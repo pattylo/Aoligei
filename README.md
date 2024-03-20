@@ -114,13 +114,13 @@ Select "Parameters", and the following parameters need to be reset:
 
 Reboot the FCU with QGC, when the FCU is reloaded, set
 
-| Parameter      | Value    | Comment   |
+| Parameter      |  Value   | Comment   |
 |:--------------:|:--------:|:---------:|
 |  EKF2_EV_CTRL  |    15    |           |
 |  EKF2_HGT_REF  |  Vision  |           |
 |  MAV_0_CONFIG  | Disabled |           |
 |  MAV_1_CONFIG  |  TELEM1  |           |
-| SER_TEL1_BAUD  |  115200  |           |
+| SER_TEL1_BAUD  |  921600  |           |
 
 Reboot the FCU with QGC, and this step is completed.
 
