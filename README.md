@@ -104,12 +104,13 @@ We assume you have at least finished the procedure "C" aforementioned. This part
 You may need half a minute to connect the FCU with QGC. When the connection is stable, you can see a content on the left of GQC.
 Select "Parameters", and the following parameters need to be reset:
 
-| Parameter           | Value     |               Comment                 |
-|:-------------------:|:---------:|:-------------------------------------:|
-|     SYS_HAS_MAG     |     0     | This FCU does not have a magnetometer |
-|     SYS_HAS_GPS     | Disabled  |    This drone does not have a GPS     |
-|    SYS_HAS_BARO     | Disabled  |  This FCU does not have a barometer   |
-|  SYS_MC_EST_GROUP   |   ekf2    |                                       |
+|    Parameter     |  Value   |                 Comment                 |
+|:----------------:|:--------:|:---------------------------------------:|
+|   SYS_HAS_MAG    |    0     |  This FCU does not have a magnetometer  |
+|   SYS_HAS_GPS    | Disabled |     This drone does not have a GPS      |
+|   SYS_HAS_BARO   | Disabled |   This FCU does not have a barometer    |
+| SYS_MC_EST_GROUP |   ekf2   |                                         |
+|    SDLOG_MODE    | disabled | Disable the log file to save CPU memory |
 
 Reboot the FCU with QGC, when the FCU is reloaded, set
 
@@ -197,6 +198,16 @@ Use the buttons "Set Spin Direction 1" and "Set Spin Direction 2" to correct the
 <div align=center>
 <img src="/documents/figures/motor_cali.png" width="350">
 </div>
+
+### 4.3 Post Calibration
+Unplug your SD card, connect the SD card to your PC. Create a new folder "etc" to the SD card.
+create "extras.txt" in "etc" folder. Then, copy the following items into the txt file.
+
+```
+mavlink stream -d /dev/ttyS0 -s LOCAL_POSITION_NED -r 100
+mavlink stream -d /dev/ttyS0 -s ATTITUDE_TARGET -r 100
+mavlink stream -d /dev/ttyS0 -s BATTERY_STATUS -r 100
+```
 
 Congratulations! If everything goes well, you have finished pre-configurations of the drone.
 
