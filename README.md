@@ -70,13 +70,13 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
     git clone https://github.com/HKPolyU-UAV/Aoligei.git && cd Aoligei
     ```
-    Then, plug your FCU into your computer while pressing the DFU button on the board of FCU. Then, do:
+    Then, unplug your USB connection, press the DUF button, plug your FCU into your computer, and unpress the DFU button. Then, do:
     ```
     dfu-util -a 0 --dfuse-address 0x08000000:force:mass-erase:leave -D ./build/holybro_kakuteh7_bootloader.bin 
     # ignore the error
     # use "holybro_kakuteh7v2_bootloader" if your are using v2
     ```
-    And then, unplug and plug FCU while pressing the DFU button on the board of FCU. Now do:
+    And then, unplug your USB connection, press the DUF button, plug your FCU into your computer, and unpress the DFU button. Now do:
     ```
     dfu-util -a 0 --dfuse-address 0x08000000 -D ./build/holybro_kakuteh7_bootloader.bin
     # again, use "holybro_kakuteh7v2_bootloader" if your are using v2
