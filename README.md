@@ -135,6 +135,9 @@ Calibrate Gyroscope, Accelerator, Level Horizon, and Orientations, respectively.
 The "Autopilot Orientation" is "ROTATION_NONE" (default.)
 
 #### 4.2.2. Radio
+We need to connect the FASST receiver to the radio. Firstly, open the radio and switch it to FASST mode.
+Secondly, push the mode select button on the receiver and then power on the receiver.
+Now the light on the receiver is shinning and remains green. Then connection is finished.
 We use "Mode2" here, as shown bellow. (If you have your own style, follow you own style.)
 
 <div align=center>
