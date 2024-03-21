@@ -226,7 +226,7 @@ We might don't know how to fix your bugs, but we are curious about them. Thank y
 ## Maintainers
 [Yefeng](https://github.com/Yang-Yefeng) @ AIRO-LAB @ RCUAS, HKPolyU <br>
 [RockyJBL](https://github.com/RockyJBL) @ AIRO-LAB @ RCUAS, HKPolyU <br>
-VITO @ AIRO-LAB @ RCUAS, HKPolyU <br>
+[VITO](https://github.com/Vitollee) @ AIRO-LAB @ RCUAS, HKPolyU <br>
 [pattylo](https://github.com/pattylo) @ AIRO-LAB @ RCUAS, HKPolyU
 
 <!-- # PX4 Drone Autopilot
