@@ -66,7 +66,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
     sudo apt install dfu-util -y
     ```
-2. Erase and load the binary file to the FCU. 
+2. Erase and load the binary file to the FCU.
     ```
     git clone https://github.com/PX4/PX4-Autopilot
     ```
