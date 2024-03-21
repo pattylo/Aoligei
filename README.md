@@ -68,15 +68,15 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
 2. Erase and load the binary file to the FCU.
     ```
-    git clone 
+    git clone https://github.com/HKPolyU-UAV/Aoligei.git && cd Aoligei
     ```
-    Then, connect your FCU with your computer while pressing the DFU button on the board of FCU. Then, do:
+    Then, plug your FCU into your computer while pressing the DFU button on the board of FCU. Then, do:
     ```
     dfu-util -a 0 --dfuse-address 0x08000000:force:mass-erase:leave -D ./build/holybro_kakuteh7_bootloader.bin 
     # ignore the error
     # use "holybro_kakuteh7v2_bootloader" if your are using v2
     ```
-    And then, do:
+    And then, unplug and plug FCU while pressing the DFU button on the board of FCU. Now do:
     ```
     dfu-util -a 0 --dfuse-address 0x08000000 -D ./build/holybro_kakuteh7_bootloader.bin
     # again, use "holybro_kakuteh7v2_bootloader" if your are using v2
