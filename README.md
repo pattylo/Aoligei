@@ -68,7 +68,7 @@ This document provides detailed guidance of configuring VIM4. We assume that you
     ```
 2. Erase and load the binary file to the FCU. 
     ```
-    git clone 
+    git clone https://github.com/PX4/PX4-Autopilot
     ```
     Then, connect your FCU with your computer while pressing the DFU button on the board of FCU. Then, do:
     ```
