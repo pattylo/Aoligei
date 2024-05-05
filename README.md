@@ -3,7 +3,6 @@
 
 This documentation serves as the tutorial for setting up (from hardware to software) drone **Aoligei**, including -C (for control), -V (for visual), -L (for LiDAR).
 
-奥利给兄弟们，造他就完了啊
 
 ## 1. What to buy.
 - Follow this [file](/documents/buy_hardware.docx) to buy all the things your need. 
@@ -223,8 +222,7 @@ We might don't know how to fix your bugs, but we are curious about them. Thank y
 
 ## 5. System Identification 
 @ https://github.com/RockyJBL
-
-嗨嗨嗨，老铁们啊，我又来了啊。虽然不是同一时间，但是是同一教程。今天，由我教老铁们辨识这款无人机的参数。
+Please follow the [link](https://github.com/HKPolyU-UAV/airo_control_interface.git) here to conduct the system identification.
 
 ## Maintainers
 [Yefeng](https://github.com/Yang-Yefeng) @ AIRO-LAB @ RCUAS, HKPolyU <br>
